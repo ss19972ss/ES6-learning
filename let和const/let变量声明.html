@@ -5,10 +5,18 @@
     </head>
     <body>
         <script type="text/javascript">
+        /**
+        *?let的特性:
+        *todo  1.不存在变量提升
+        *todo  2.暂时性死区
+        *   !如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。
+        *   !凡是在声明之前就使用这些变量，就会报错。
+        *todo  3.不允许重复声明
+          */
           /* let yyf = 'FG';
           let yyf = '胖头鱼' */  //1.变量不能重复声明
-
           {
+              //console.log(DD)
               let DD = '奶哥' //2.块级作用域，只在代码块中有效 if else while for中也是块级作用域
           }
           //console.log(DD)
