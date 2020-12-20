@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+          .item{
+              width: 80px;
+              height: 80px;
+              float: left;
+              margin-right: 20px;
+              border: 1px solid black;
+          }
+        </style> 
+    </head>
+    <body>
+        <div class="container">
+            <h2>点击切换颜色</h2>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <script type="text/javascript">
+            var items = document.getElementsByClassName('item')
+            for(let i=0;i<items.length;i++){
+                items[i].onclick = function(){
+                    items[i].style.background = 'red' //var没有块级作用域，存在于全局作用域，此时function中没有i，向上级到全局中找到i=3
+                }
+            }
+            /* 等价于 {
+                let i=0;
+                items[i].onclick = function(){
+                    items[i].style.background = 'red'
+                }
+            } */
+            //将var改成let
+            console.log(i)
+        </script>
+    </body>
+</html>

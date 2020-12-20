@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Phone{
+                constructor(price){
+                    this.price = price
+                }
+                get price(){
+                    console.log('价格属性被获取')
+                    return 1999
+                }
+                set price(newValue){
+                    console.log('价格属性被修改')
+                }
+            }
+            let xiaomi = new Phone()
+            xiaomi.price = 999
+            console.log(xiaomi.price) //访问属性会调用类的get方法，属性值为get方法的返回值
+        </script>
+    </body>
+</html>

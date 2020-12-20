@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            //构造函数
+            function Phone(brand,price){
+                this.brand = brand
+                this.price = price
+            }
+            Phone.prototype.call = function(){
+                console.log('telephone')
+            }
+            let huawei = new Phone('huawei',5999)
+
+            //class
+            class shouji{
+                constructor(brands,price){
+                    this.brands = brands
+                    this.price = price
+                }
+                call(){
+                    console.log('shouji')
+                }
+            }
+            let oneplus = new shouji('oneplus',3999)
+            console.log(huawei)
+            console.log(oneplus)
+        </script>
+    </body>
+</html>

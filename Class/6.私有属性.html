@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+             class Person{
+                 name
+                 #age
+                 #weight
+                 constructor(name,age,weight){
+                     this.name = name
+                     this.#age = age
+                     this.#weight = weight
+                 }
+                 introduce(){
+                     console.log(this.name,this.#age,this.#weight)
+                 }
+             }
+             const girl = new Person('DD',18,200)
+             console.log(girl.name)
+             //console.log(girl.#age)
+             girl.introduce()
+        </script>
+    </body>
+</html>

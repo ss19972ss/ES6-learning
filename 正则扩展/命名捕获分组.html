@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+             let str = '<a href="www.baidu.com">百度</a>'
+             const reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/
+             const res = reg.exec(str)
+             console.log(res)   
+        </script>
+    </body>
+</html>

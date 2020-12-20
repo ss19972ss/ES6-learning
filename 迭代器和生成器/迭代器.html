@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const arr = ["aa","bb","cc"]
+            for(let i of arr){
+                console.log(i)
+            }
+
+            let iterator = arr[Symbol.iterator]()
+            console.log(iterator)
+            console.log(iterator.next())
+            console.log(iterator.next())
+            console.log(iterator.next())  //当属性 done 为 true 时访问结束
+        </script>
+    </body>
+</html>

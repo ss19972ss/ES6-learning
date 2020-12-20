@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            const A = [1,2,3]
+            let [a,b] = A
+            console.log(a,b)
+
+            const B = {
+                name:'DD',
+                age:18,
+                fn:function() {
+                    console.log('拆哪')
+                }
+            }
+            const {name,age,fn} = B
+            console.log(name,age)
+            fn()
+        </script>
+    </body>
+</html>

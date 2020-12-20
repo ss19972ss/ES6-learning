@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            let s1 = Symbol('fgnb')
+            let s2 = Symbol('fgnb')
+            console.log(s1===s2)
+
+            let s3 = Symbol.for('fgsb')
+            let s4 = Symbol.for('fgsb')
+            console.log(s3===s4,s3,s4)
+            //不能与其它数据进行运算
+
+            //给对象增加方法
+            let game = {
+                up: function(){console.log('pre')}
+            }
+            let methods = {
+                up:Symbol(),
+            }
+            game[methods.up] = function(){console.log('later')}
+            game[methods.up]()
+
+            let a = {
+                [Symbol('say')]:function(){console.log(1)}
+            }
+        </script>
+    </body>
+</html>

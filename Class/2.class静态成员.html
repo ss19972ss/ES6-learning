@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function Phone(){
+
+            }
+            Phone.name = 'huawei'
+            Phone.call = function(){
+                console.log('huawei好')
+            }
+            Phone.prototype.size = '5.6'
+            let huawei = new Phone()
+            console.log(huawei.name,huawei.call,huawei.__proto__.size)  //实例对象不能访问到函数对象的属性
+            console.log(Phone.prototype.size)
+
+            class Shouji{
+                static name = 'xiaomi'
+                static call = function(){
+                    console.log('xiaomi好')
+                }
+            }
+            let xiaomi = new Shouji()
+            console.log(xiaomi.name,xiaomi.call)  //静态属性属于类，不属于实例对象
+        </script>
+    </body>
+</html>

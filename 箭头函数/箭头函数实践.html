@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ad"></div>
+        <script type="text/javascript">
+        function Person(){
+          this.age = 0;
+
+          setInterval(
+              ()=>{console.log(this.age)},1000
+          )
+        }
+       var p = new Person();
+            let ad = document.getElementsByClassName('ad')[0]
+            ad.onclick = function(){
+                console.log(this)
+                setTimeout(
+                    //console.log(this)
+                    ()=>{
+                        console.log(this)
+                        this.style.background = 'red'
+                    },2000
+                )
+            }
+            const arr = [1,2,3,4]
+            let arr1 = arr.filter((item)=>item%2===0)
+            console.log(arr1)
+            //箭头函数适合与this无关的回调，不适合DOM绑定事件的回调，对象的方法
+        </script>
+    </body>
+</html>

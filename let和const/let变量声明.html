@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+          /* let yyf = 'FG';
+          let yyf = '胖头鱼' */  //1.变量不能重复声明
+
+          {
+              let DD = '奶哥' //2.块级作用域，只在代码块中有效 if else while for中也是块级作用域
+          }
+          //console.log(DD)
+
+          /* console.log(A)  //3.不存在变量提升
+          let A = 1 */
+
+          //4.不影响作用域链
+          {
+              let s = 'asdasdas'
+              function fn(){
+                  console.log(s)
+              }
+              fn()
+          }
+        </script>
+    </body>
+</html>

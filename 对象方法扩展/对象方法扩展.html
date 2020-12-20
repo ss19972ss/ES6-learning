@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const test1 = {
+                name:'YYF',
+                age:30,
+                host:'localhost',
+                port:'3030',
+                pr1:'test1'
+            }
+            const test2 = {
+                name:'FG',
+                age:20,
+                host:'www',
+                port:'8080',
+                pr2:'test2'
+            }
+            console.log(Object.assign(test1,test2)) //后面对象会覆盖前一个对象
+
+            const school = {
+                name:'WHUT'
+            }
+            const city = {
+                name:'wuhan'
+            }
+            Object.setPrototypeOf(school,city)
+            console.log(school)
+            console.log(Object.getPrototypeOf(school))
+        </script>
+    </body>
+</html>

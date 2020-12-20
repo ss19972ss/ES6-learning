@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Phone{
+                constructor(brands,price){
+                    this.brands = brands
+                    this.price = price
+                }
+                call(){
+                    console.log('father')
+                }
+            }
+            class smartPhone extends Phone{
+                constructor(brands,price,size,type){
+                    super(brands,price)
+                    this.size = size
+                    this.type = type
+                }
+                photo(){
+                    console.log('photo')
+                }
+                call(){
+                    //js中不能直接调用父类的重名方法
+                    console.log('son')
+                }
+            }
+            let xiaomi = new smartPhone('xiamo',1999,5.6,'5G')
+            xiaomi.call()
+            console.log(xiaomi)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            //await必须放在async函数中,await 操作符用于等待一个 Promise 对象
+            //await 表达式会暂停当前 async function 的执行，等待 Promise 处理完成。
+            //若 Promise 正常处理(fulfilled)，其回调的resolve函数参数作为 await 表达式的值，继续执行 async function。
+            const p = new Promise((resolve,rejected)=>{
+                resolve('成功')
+            })
+            async function fn(){
+                const res = await p;
+                console.log(res)
+            }
+            fn()
+        </script>
+    </body>
+</html>

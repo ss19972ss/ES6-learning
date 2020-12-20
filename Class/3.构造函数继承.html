@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function Phone(brand,price){
+                this.brand = brand
+                this.price = price
+            }
+            Phone.prototype.call = function(){
+                console.log('telephone')
+            }
+
+            function smartPhone(brand,price,size,type){
+                Phone.call(this,brand,price)
+                this.size = size
+                this.type = type
+            }
+            smartPhone.prototype = new Phone()
+            smartPhone.prototype.constructor = smartPhone
+            smartPhone.prototype.phone = function(){
+                console.log('phone')
+            }
+            let onplues = new smartPhone('oneplus',3999,6.1,'5g')
+            console.log(onplues)
+        </script>
+    </body>
+</html>

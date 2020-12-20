@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function * fn(){
+                yield '1';
+                yield '2';
+                yield '3';
+            }
+            let res = fn()
+            console.log(res.next())
+
+            /* for(let i of res){
+                console.log(i)
+            } */
+        </script>
+    </body>
+</html>

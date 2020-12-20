@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            //模拟获取用户数据 订单数据 商品数据
+            function getUserData(){
+                setTimeout(()=>{
+                    let data = '用户数据'
+                    gen.next(data)
+                },1000)
+            }
+            function getOrderData(){
+                setTimeout(()=>{
+                    let data = '订单数据'
+                    gen.next(data)
+                },1000)
+            }
+            function getGoodsData(){
+                setTimeout(()=>{
+                    let data = '商品数据'
+                    gen.next(data)
+                },1000)
+            }
+
+            function * Gen(){
+                let user = yield getUserData();
+                console.log(user)
+                let order = yield getOrderData();
+                console.log(order)
+                let goods = yield getGoodsData();
+                console.log(goods)
+            }
+
+            let gen = Gen()
+            gen.next()  //进入第一个yield,然后在getUserData中第二次调用next时传入的参数将成为第一个yield的返回结果
+        </script>
+    </body>
+</html>

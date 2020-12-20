@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            /* 语法上讲，promise是一个构造函数，用来封装异步操作，并可以获得其成功或者失败的结果 */
+            /* "同步模式"就是后一个任务等待前一个任务结束，然后再执行，程序的执行顺序与任务的排列顺序是一致的、同步的。
+            "异步模式"则完全不同，每一个任务有一个或多个回调函数（callback），前一个任务结束后，不是执行后一个任务，
+            而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的。 
+            */
+            //ajax是异步请求，多层嵌套会造成回调地狱，promise模拟同步，将异步回调类似于同步来处理业务逻辑。
+            const p = new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    let res = '读取数据成功'
+                    resolve(res) //在回调中执行一些操作（例如异步），如果一切都正常，则调用 resolve，否则调用 reject。
+                },1000)
+            })
+            p.then(function(value){
+                console.log(value)
+            },function(reason){
+                console.log(reason)
+            })
+        </script>
+    </body>
+</html>

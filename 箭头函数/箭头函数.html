@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+        'use strict';
+           //1.this是静态的，始终只会从自己的作用域链的上一层继承this,相当于作用域上一层的this
+           function getName(){
+               console.log(this.name)
+           }
+           let getName2 = ()=>{
+               console.log(this.name)
+           }
+           var name = 'asdsd'
+           //直接调用
+           getName()
+           getName2()
+           //call调用
+           let Person1 = {name:'fg'}
+           getName.call(Person1)
+           getName2.call(Person1)
+
+           //不能作为构造实例化对象
+           /* let you = (name,age)=>{
+               this.name = name
+               this.age = age
+           }
+           let me = new you('DD',12)
+           console.log(me) */
+           //不能使用arguments
+
+        </script>
+    </body>
+</html>

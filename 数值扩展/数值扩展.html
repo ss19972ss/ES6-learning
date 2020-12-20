@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            //Number.EPSILON是js能表示的最小精度
+            function equal(a,b){
+                if(Math.abs(a-b)<Number.EPSILON){
+                    return true
+                }
+                else{
+                    return false
+                }
+            }
+            console.log(0.1+0.2===0.3)
+            console.log(equal(0.1+0.2,0.3))
+            
+            //Number.isFinite检测是否为有限数
+            console.log(Number.isFinite(100/0))
+
+            //isNaN、parseFloat、parseInt都变成了Number下的方法
+        </script>
+    </body>
+</html>

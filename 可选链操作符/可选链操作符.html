@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+             let obj = {
+                 db:{
+                     host:'192',
+                     name:'root'
+                 },
+                 cache:{
+                     host:'191',
+                     name:'sa'
+                 }
+             }
+             const host = obj?.db?.host
+             console.log(host)
+        </script>
+    </body>
+</html>

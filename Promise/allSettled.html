@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+             const p1 = new Promise((resolve,rejected)=>{
+                 setTimeout(()=>{
+                     resolve('p1')
+                 },100)
+             })
+             const p2 = new Promise((resolve,rejected)=>{
+                 setTimeout(()=>{
+                     rejected('p2')
+                 },100)
+             })
+
+             const res1 = Promise.allSettled([p1,p2])  //返回值的状态始终是成功
+             const res2 = Promise.all([p1,p2])  //只要有一个promise是失败状态，则返回失败状态和失败值
+
+             console.log(res1)
+             console.log(res2)
+        </script>
+    </body>
+</html>

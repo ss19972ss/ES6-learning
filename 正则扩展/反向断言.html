@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+             let str = '123我带你们打666白给'
+             const reg1 = /\d+(?=白)/
+             const res1 = reg1.exec(str)
+             console.log(res1)  
+
+            //反向断言
+             const reg2 = /(?<=打)\d+/ 
+             const res2 = reg2.exec(str)
+             console.log(res2)
+        </script>
+    </body>
+</html>

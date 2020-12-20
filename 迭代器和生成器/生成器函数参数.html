@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function * fn(args){
+                console.log(args);
+                let one = yield 111;
+                console.log(one)
+                let two = yield 222;
+                console.log(two)
+                let three = yield 333;
+                console.log(three)
+            }
+            let res = fn('AA')
+            console.log(res.next())
+            console.log(res.next('BB')) //第二次调用next时传入的实参将作为第一个yield语句的返回结果
+            console.log(res.next('CC'))
+            console.log(res.next('DD'))
+        </script>
+    </body>
+</html>

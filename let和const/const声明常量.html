@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            const yyf = 'FG'
+            //1.一定要赋初值 2.一般常量使用大写
+            //3.常量值不能修改
+            //4.块级作用域
+            {
+                const FG = 'YYF'
+            }
+            //console.log(FG)
+            //const定义基本数据类型的变量是不可以修改，其它复杂数据类型是可以修改的
+            const OB = ['YYF','DD']
+            const A = {name:'DD'}
+            A.age = 12
+            console.log(A)
+            OB.push('DG')
+            console.log(OB)
+        </script>
+    </body>
+</html>

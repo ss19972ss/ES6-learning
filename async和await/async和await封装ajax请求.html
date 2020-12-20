@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function sendAjax(url){
+                return new Promise((resolve,rejected)=>{
+                    const x = new XMLHttpRequest()
+                    x.open('GET',url)
+                    x.send()
+                    x.onreadystatechange = function(){
+                        if(x.readyState===4){
+                            if(x.status>=200&&x.status<300){
+                                resolve(x.response)
+                            }
+                            else{
+                                resolve(x.status)
+                            }
+                        }
+                    }
+                })
+            }
+
+           async function main(){
+               const res = await sendAjax('https://api.apiopen.top/getJoke') //await返回的是promise成功的值
+               console.log(res)
+           }
+           main()
+        </script>
+    </body>
+</html>

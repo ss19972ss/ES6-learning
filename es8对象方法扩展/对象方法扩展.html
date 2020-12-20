@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const obj = {
+                name:'ss',
+                school:['xaut','whut'],
+            }
+            console.log(Object.keys(obj))
+            console.log(Object.values(obj))
+            console.log(Object.entries(obj))
+            const map = new Map(Object.entries(obj))
+            console.log(map.get('name'))
+
+            console.log(Object.getOwnPropertyDescriptors(obj))  //对象属性的描述对象
+
+            const obj1 = Object.create(null,{
+                name:{
+                    value:'ss',
+                    writable:true,
+                    enumerable:true,
+                    configurable:true
+                }
+            })//用于深层次克隆对象
+        </script>
+    </body>
+</html>
